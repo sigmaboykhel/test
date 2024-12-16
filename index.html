@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Boy Speech about War</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background: url('background1.jpg.jpeg') no-repeat center center; /* Set the background image */
+            background-size: cover; /* Ensures the image covers the whole screen */
+        }
+
+        /* Background Image */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('c:\Users\Student-PC\Documents\Mallare_SpeechWebpage\background1.jpg.jpeg'); /* Use the new image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: brightness(0.6); /* Optional: Adjust the brightness for a dreamy effect */
+        }
+
+        /* Glowing Stars */
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: twinkle 2s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Animate stars to twinkle */
+        @keyframes twinkle {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Header styles */
+        header h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Speech container styles */
+        .speech-container {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Speech text styling */
+        .speech-placeholder {
+            font-family: 'Georgia', serif;
+            font-size: 1.2em;
+            color: rgb(11, 43, 48);
+            line-height: 1.8;
+            text-align: center;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 0, 255, 0.6);
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        /* Stars positioning and random creation */
+        .star-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Empty div for background image -->
+    <div class="background"></div>
+
+    <!-- Star container with scattered stars -->
+    <div class="star-container">
+        <!-- The stars will be added here via JS -->
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Sigma Boy Speech about War</h1>
+    </header>
+
+    <!-- Speech Section -->
+    <section class="speech-container">
+        <div class="speech-box">
+            <!-- Speech Text -->
+            <p class="speech-placeholder">
+                War, the result of humanity’s greatest failures, where lives are lost, dreams are destroyed, and the pain lingers far beyond the fighting. It is the heavy cost of failing to choose peace. War is destruction, pain, and loss—it tears families apart and leaves nations in ruins. It is not bravery or honor; it is a cycle of hatred that feeds on innocent lives. The sound of bombs replaces laughter, and the cries of the wounded drown out hope. What do we gain from war? Broken homes, grieving hearts, and a future robbed of peace. Weapons do not solve problems; they only create scars that last for generations.
+                
+                We must rise above personal grievances and fight for the freedom and future of our nation. We have the power to choose understanding over violence, unity over division. Let us not let greed, anger, or power blind us to the value of human life. War may be fought with guns, but peace is built with compassion and love. The world does not need more battles—it needs more people willing to fight for peace.
+
+                Mabuhay ang Pilipinas!
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Thank you for listening!</p>
+    </footer>
+
+    <script>
+        // Create random stars effect
+        const starContainer = document.querySelector('.star-container');
+
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // Random size and position
+            const size = Math.random() * 3 + 1; // Sizes from 1px to 4px
+            const positionX = Math.random() * 100; // Random position on X-axis (percentage)
+            const positionY = Math.random() * 100; // Random position on Y-axis (percentage)
+            const animationDelay = Math.random() * 2; // Randomize animation delay
+            
+            // Apply styles dynamically
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${positionX}%`;
+            star.style.top = `${positionY}%`;
+            star.style.animationDelay = `${animationDelay}s`;
+            
+            // Append to the container
+            starContainer.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
